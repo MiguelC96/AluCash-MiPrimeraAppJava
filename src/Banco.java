@@ -12,7 +12,7 @@ public class Banco {
         clientes.add(new Cliente("Luis", "Cuenta Corriente", 500.0, "5678"));
     }
 
-    // agregar un nuevo cliente
+    // Método para agregar un nuevo cliente
     public void agregarCliente(Cliente cliente) {
         clientes.add(cliente);
     }
@@ -79,7 +79,7 @@ public class Banco {
             String contrasena = scanner.next();
 
             Cliente nuevoCliente = new Cliente(nombre, tipoCuenta, saldo, contrasena);
-            agregarCliente(nuevoCliente); // Usamos  agregarCliente
+            agregarCliente(nuevoCliente); // Usamos el método agregarCliente
             System.out.println("Cliente registrado con éxito.");
         } else {
             System.out.println("El nombre ya está en uso.");

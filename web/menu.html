@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - AluCash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Menú del Cliente</h2>
+
+    <button onclick="logout()">Cerrar sesión</button>
+    <div id="logoutResponse"></div>
+    
+    <div id="clientMenu">
+        <button onclick="checkBalance()">Consultar Saldo</button>
+        <button onclick="logout()">Cerrar sesión</button>
+        
+        <div>
+            <input type="number" id="depositAmount" placeholder="Cantidad a depositar" required>
+            <button onclick="deposit()">Depositar</button>
+        
+            <input type="number" id="withdrawAmount" placeholder="Cantidad a retirar" required>
+            <button onclick="withdraw()">Retirar</button>
+            <p id="withdrawResponse" class="hidden"></p>
+        </div>
+    </div>
+
+        <div>
+        <h2>Transferir fondos</h2>
+        <input type="text" id="recipientUsername" placeholder="Nombre del destinatario" required>
+        <input type="number" id="transferAmount" placeholder="Cantidad a transferir" required>
+        <button onclick="transfer()">Transferir</button>
+        <p id="transferResponse" class="hidden"></p>
+    </div>
+        
+        
+        <p id="clientResponse" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
